@@ -14,7 +14,7 @@ import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
   const { data } = useData();
-const last = data?.events?.[data.events.length - 1];
+const last = data?.events?.sort((a, b) => new Date(b.date) - new Date(a.date))[0];
   return <>
     <header>
       <Menu />
@@ -118,12 +118,12 @@ const last = data?.events?.[data.events.length - 1];
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
         <EventCard
-          imageSrc={last?.cover}
-          title={last?.title}
-          date={new Date(last?.date)}
-          small
-          label="boom"
-        />
+  imageSrc={last?.cover}
+  title={last?.title}
+  date={new Date(last?.date)}
+  small
+  label={last?.type}
+/>
       </div>
       <div className="col contact">
         <h3>Contactez-nous</h3>
