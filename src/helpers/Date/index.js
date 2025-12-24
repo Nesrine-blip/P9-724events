@@ -13,4 +13,4 @@ export const MONTHS = {
   11: "décembre",
 }; 
 
-export const getMonth = (date) => MONTHS[date.getMonth()];
+export const getMonth = (date) => MONTHS[date.getUTCMonth()];
