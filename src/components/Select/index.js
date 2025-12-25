@@ -14,7 +14,7 @@ const Select = ({
   type = "normal",
 }) => {
   const [value, setValue] = useState();
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(true);// add onChange parameter bug
   const changeValue = (newValue) => {
     onChange(newValue);
     setValue(newValue);

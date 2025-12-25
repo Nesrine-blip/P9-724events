@@ -14,7 +14,7 @@ const EventList = () => {
   const [type, setType] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   
-  // 🔧 BUG FIX: Filter by type
+  //  BUG FIX: Filter by type
   const filteredEvents = (
     (!type
       ? data?.events
